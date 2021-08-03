@@ -12,8 +12,8 @@
 import csv
 import requests
 import locale
-from time import sleep
 from config import URL, ARQUIVO_CSV
+from helpers import *
 
 locale.setlocale(locale.LC_ALL, 'pt_br')
 
@@ -21,15 +21,11 @@ print("Hello World!")
 
 if __name__ == "__main__":
     print("\n++++++ Dados CORONAVIRUS ++++++\n")
-    print(f"- Carregando aplicação.")
-    sleep(0.8)
-    print(f"- Carregando aplicação..")
-    sleep(0.8)
-    print(f"- Carregando aplicação...\n")
-    sleep(0.8)
 
 # Requisição para o link do arquivo .csv
 response = requests.get(URL)
+mens_carregando()
+
 
 # Criando um arquivo com dados da URL e salvando no PC local.
 with open('covid19.csv', 'w', newline='\n') as novo_arquivo:
