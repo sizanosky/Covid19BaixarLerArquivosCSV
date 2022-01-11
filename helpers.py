@@ -40,7 +40,6 @@ def pais_entrada():
 
     return pais_ref
 
-
 def data_entrada():
     """
     Função que recebe a entrada do usuário, cria uma lista
